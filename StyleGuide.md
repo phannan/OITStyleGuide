@@ -1,6 +1,8 @@
-# C++ Coding Standards for CST136
+# C++ Coding Standards for CST116 / CST126 / CST136
 
-Version:  1.0 - Check back for new versions before you start each lab.
+If you are in 116 or 126 there will be new stuff that you don't understand.  Thats ok.  If we haven't covered it yet, then ignore it.
+
+Check back for new versions before you start each lab.
 
 These standards started life here:  https://gist.github.com/lefticus/10191322#file-codingstandards-1-style-md
 
@@ -8,7 +10,7 @@ These standards started life here:  https://gist.github.com/lefticus/10191322#fi
 
 C++ allows for arbitrary length identifier names, so there's no reason to be terse when naming variables. Use descriptive names, and be consistent in the style
 
- * `CamelCase`
+ * `CamelCase` or `camelCase`
  * `snake_case`
  
 are common examples. snake_case has the advantage that it can also work with spell checkers, if desired.
@@ -17,17 +19,24 @@ Chose either 'CamelCase' or snake_case and stick to it within your program.
 
 ### Common C++ Naming Conventions
 
-These naming conventions are prefered and you'll only use points if your code is totally awkward.
 
+ * Constants are all capital: `const int PI=3.14159265358979323;`
+ * Prefer a verb_noun or VerbNoun name for functions.  For class methods the noun can be implied.
+ * Prefer nouns for data names.  
+ 
+ * Name your variable something meaningful.  i, j, k are fine for loop variables.  Otherwise single letter variable names aren't helpful and will confuse you and your reader.  
+     * The reader should understand what the variable / method / constant does using the name only.
+     * Avoid doh! comments and name your variables well.  
+ 
+ Note:  Many people also prefer to have standard capitalization for functions and classes ie:
  * Types start with capitals: `MyClass`
- * functions and variables start with lower case: `myMethod`
- * constants are all capital: `const int PI=3.14159265358979323;`
+ * Functions and variables start with lower case: `myMethod`
+ 
+ I never remember this, so I won't require it of you.
 
 *Note that the C++ standard does not follow any of these guidelines. Everything in the standard is lowercase only.*
 
-Prefer a verb_noun or VerbNoun name for functions.  For class methods the noun can be implied.
 
-The reader should understand what the variable / method / constant does using the name only.
 
 
 ### Distinguish Private Object Data
@@ -73,7 +82,6 @@ Use #ifdef TODO to block out code you aren't finished with yet.
 
 This causes the name space you are `using` to be pulled into the namespace of the header file.
 
-
 ## Include Guards
 
 Header files must contain an distinctly named include guard to avoid problems with including the same header multiple times or conflicting with other headers from other projects
@@ -89,6 +97,7 @@ class MyClass {
 
 #endif
 ```
+You can also use *#pragma once*  IF and Only IF you explain it the first time you use it. 
 
 ## Use consistent indenting. 
 
@@ -235,7 +244,10 @@ If you have more then 150 lines in your program then separate out any classes / 
 ## Always Use Namespaces
 
 There is almost never a reason to declare an identifier in the global namespaces. Instead, functions and classes should exist in an appropriately named namespaces or in a class inside of a namespace. Identifiers which are placed in the global namespace risk conflicting with identifiers from other (mostly C, which doesn't have namespaces) libraries.
-Do not bring in the whole std namespace in labs,  Instead site each individual element.  ie std::cout or std::endl 
+
+136:  Do not bring in the whole std namespace in labs,  Instead site each individual element.  ie std::cout or std::endl 
+126:  You can bring in namespace std and I'd encourage you to start getting in the habit of using std::cout.
+116:  You can use "using namespace std"
 
 ## Avoid Compiler Macros
 
@@ -262,4 +274,3 @@ Reference:  https://isocpp.org/wiki/faq/const-correctness
 Bottom Line:  If you aren't updating it, tell the compiler.  For example:
 <li> Any function that doesn't update the member data should be const.
 <li> Parameters that aren't updated are call by value (native data types) or const parm & (classes)
-
