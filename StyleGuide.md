@@ -78,9 +78,7 @@ Comment blocks should use `//`, not `/* */`. Using `//` makes it much easier to 
 Use #ifdef TODO to block out code you aren't finished with yet.  
 
 
-## Never Use `using` In a Header File
 
-This causes the name space you are `using` to be pulled into the namespace of the header file.
 
 ## Include Guards
 
@@ -99,6 +97,11 @@ class MyClass {
 ```
 You can also use *#pragma once*  IF and Only IF you explain it the first time you use it. 
 
+## Includes and Namespaces
+*  Only include libraries you need.  Including extra libraries = bloat.  If you can comment it out and it still compiles, it doesn't belong.
+* CST136 programs should have using std::<the thing you are using>.  CST116 & CST126 can use "using namespace std". 
+* Never Use `using` In a Header File.  This causes the name space you are `using` to be pulled into the namespace of the header file.
+ 
 ## Use consistent indenting. 
 
 Tabs are not allowed, and a mixture of tabs and spaces is strictly forbidden. Modern autoindenting IDEs and editors require a consistent standard to be set.
