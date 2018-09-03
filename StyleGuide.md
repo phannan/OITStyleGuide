@@ -4,7 +4,14 @@ If you are in 116 or 126 there will be new stuff that you don't understand.  Tha
 
 Check back for new versions before you start each lab.
 
-These standards started life here:  https://gist.github.com/lefticus/10191322#file-codingstandards-1-style-md
+These standards started life here:  https://gist.github.com/lefticus/10191322#file-codingstandards-1-style-md  I've heavily modified.  Any weirdness is mine and goodness is probably from the source.
+
+## Site your source
+When you didn't originate the code, site your source.  For example see above.
+
+## Don't Pause at the end
+* Don't do a getch() at the end of your program.  It is depricated.
+* Don't use other methods for keeping your console app on the screen.  Instead use Ctrl-F5 to run or add breakpoints.
 
 ## Descriptive and Consistent Naming
 
@@ -35,6 +42,8 @@ Chose either 'CamelCase' or snake_case and stick to it within your program.
  I never remember this, so I won't require it of you.
 
 *Note that the C++ standard does not follow any of these guidelines. Everything in the standard is lowercase only.*
+
+
 
 
 
@@ -269,8 +278,6 @@ namespace my_project {
 #define PI 3.14159;
 ```
 
-## Site your source
-When you didn't originate the code, site your source.  For example see the top of this style guide.
 
 ### Strive to be const correct
 Reference:  https://isocpp.org/wiki/faq/const-correctness
