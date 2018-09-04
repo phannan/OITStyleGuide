@@ -1,6 +1,6 @@
 # C++ Coding Standards for CST116 / CST126 / CST136
 
-If you are in 116 or 126 there will be new stuff that you don't understand.  Thats ok.  If we haven't covered it yet, then ignore it.
+If you are in 116 or 126 there will be new stuff that you don't understand.  That is ok.  If we haven't covered it yet, then ignore it.
 
 Check back for new versions before you start each lab.
 
@@ -12,6 +12,9 @@ When you didn't originate the code, site your source.  For example see above.
 ## Don't Pause at the end
 * Don't do a getch() at the end of your program.  It is depricated.
 * Don't use other methods for keeping your console app on the screen.  Instead use Ctrl-F5 to run or add breakpoints.
+
+## Check your spelling and grammar on your output
+* The user will turn on the bozo bit if you leave in spelling or grammatical errors.  Copy your output into a word docuiment if you need to.
 
 ## Descriptive and Consistent Naming
 
@@ -25,7 +28,6 @@ are common examples. snake_case has the advantage that it can also work with spe
 Chose either 'CamelCase' or snake_case and stick to it within your program.  
 
 ### Common C++ Naming Conventions
-
 
  * Constants are all capital: `const int PI=3.14159265358979323;`
  * Prefer a verb_noun or VerbNoun name for functions.  For class methods the noun can be implied.
@@ -211,7 +213,7 @@ private:
 
 
 // Good Idea
-// C++'s memeber initializer list is unique to the language and leads to
+// C++'s member initializer list is unique to the language and leads to
 // cleaner code and potential performance gains that other languages cannot 
 // match
 class MyClass
@@ -250,7 +252,7 @@ This is a proactive approach to simplify compilation time and rebuilding depende
 
 ## Use Object Based .h and .cpp
 
-If you have more then 150 lines in your program then separate out any classes / structs into their own .h and .cpp. Note that .h files should only have inline methods.  For Template classes you can ignore this since there is a known bug here.  
+If you have more than 150 lines in your program then separate out any classes / structs into their own .h and .cpp. Note that .h files should only have inline methods.  For Template classes you can ignore this since there is a known bug here.  
 
 ## Always Use Namespaces
 
