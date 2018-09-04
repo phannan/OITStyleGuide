@@ -84,10 +84,9 @@ C++11 introduces `nullptr` which is a special type denoting a null pointer value
 
 Comment blocks should use `//`, not `/* */`. Using `//` makes it much easier to comment out a block of code while debugging.
 
-Use #ifdef TODO to block out code you aren't finished with yet.  
+Its ok to comment out code.  You also can use #ifdef TODO to block out code you aren't finished with yet.  
 
-
-
+It is better to turn an incomplete program that is compiling and has commented out code then an aborting or not compiling program.
 
 ## Include Guards
 
