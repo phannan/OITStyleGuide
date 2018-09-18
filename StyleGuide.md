@@ -13,6 +13,9 @@ When you didn't originate the code, site your source.  For example see above.
 * Don't do a getch() at the end of your program.  It is depricated.
 * Don't use other methods for keeping your console app on the screen.  Instead use Ctrl-F5 to run or add breakpoints.
 
+## auto
+* Ask permission before using auto.  You will need to convince the instructor that you understand the pros and cons of your choice.
+
 ## Check your spelling and grammar on your output
 * The user will turn on the bozo bit if you leave in spelling or grammatical errors.  Copy your output into a word docuiment if you need to.
 
