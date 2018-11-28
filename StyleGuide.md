@@ -53,6 +53,10 @@ Chose either 'CamelCase' or snake_case and stick to it within your program.
 
 
 
+### Unstructured Jumping
++ If goto's you use, cranky instructor you will make.  Many points will you lose.  
++ In 116,125, 136 we will only use break statements connected to a switch statement.  There are situations where it is reasonable to use breaks and in these classes we wont.  You may only use them if you can make a cogent arugument for a break and you get permision _in advance_.
+
 ### Distinguish Private Object Data
 
 Name private data with a prefix to distinguish it from public data.  I prefer:  `m_`  and you can use _ instead.
