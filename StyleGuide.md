@@ -140,12 +140,6 @@ Leaving them off can lead to semantic errors in the code.
 
 ```cpp
 // Bad Idea
-// this compiles and does what you want, but can lead to confusing
-// errors if close attention is not paid.
-for (int i = 0; i < 15; ++i)
-  std::cout << i << std::endl;
-
-// Bad Idea
 // the cout is not part of the loop in this case even though it appears to be
 int sum = 0;
 for (int i = 0; i < 15; ++i)
@@ -260,7 +254,10 @@ This is a proactive approach to simplify compilation time and rebuilding depende
 
 ## Use Object Based .h and .cpp
 
-If you have more than 150 lines in your program then separate out any classes / structs into their own .h and .cpp. Note that .h files should only have inline methods.  For Template classes you can ignore this since there is a known bug here.  
++ If you have more than 150 lines in your program then separate out any classes / structs into their own .h and .cpp. 
++ Note that .h files should only have inline methods.    
++ If the lab says do a seperate .h / .cpp then do it, even if your program is small.
++ For Template classes (136) you can ignore this since there is a known bug here.  
 
 ## Always Use Namespaces
 
