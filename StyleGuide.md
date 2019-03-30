@@ -32,7 +32,7 @@ Chose either 'CamelCase' or snake_case and stick to it within your program.
 
 ### Common C++ Naming Conventions
 
- * Constants are all capital: `const int PI=3.14159265358979323;`
+ * Constants are all capital: `const int PI=3.14159265358979323;` or use k as the first character ie kVariableName or k_variable_name.
  * Prefer a verb_noun or VerbNoun name for functions.  Once you chose a scheme stick to it throughout the program. For class methods the noun can be implied.
  * Prefer nouns for data names.  
  
