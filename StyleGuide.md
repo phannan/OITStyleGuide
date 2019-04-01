@@ -135,7 +135,7 @@ int myFunction(bool t_b)
 }
 ```
 
-## {} are required for blocks. 
+## {} are encouraged for blocks. 
 Leaving them off can lead to semantic errors in the code.
 
 ```cpp
