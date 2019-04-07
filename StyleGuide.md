@@ -267,9 +267,9 @@ There is almost never a reason to declare an identifier in the global namespaces
 126:  You can bring in namespace std and I'd encourage you to start getting in the habit of using std::cout.
 116:  You can use "using namespace std"
 
-## Avoid Compiler Macros
+## Think Through Tradeoffs with Compiler Macros
 
-Compiler definitions and macros are replaced by the pre-processor before the compiler is ever run. This can make debugging very difficult because the debugger doesn't know where the source came from.
+Compiler definitions and macros are replaced by the pre-processor before the compiler is ever run. This can make debugging very difficult because the debugger doesn't know where the source came from.   There are times when compiler macros are helpful, AND think through the tradeoffs and make a conscious choice.  
 
 ```cpp
 // Good Idea
