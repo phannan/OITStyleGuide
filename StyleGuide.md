@@ -289,4 +289,4 @@ namespace my_project {
 Reference:  https://isocpp.org/wiki/faq/const-correctness
 Bottom Line:  If you aren't updating it, tell the compiler.  For example:
 <li> Any function that doesn't update the member data should be const.
-<li> Parameters that aren't updated are call by value (native data types) or const parm & (classes)
+<li> Parameters that aren't updated are call by value (native data types & string) or const parm & (classes)
