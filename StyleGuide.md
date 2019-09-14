@@ -13,11 +13,16 @@ When you didn't originate the code, site your source.  For example see above.
 * Don't do a getch() at the end of your program.  It is depricated.
 * Don't use other methods for keeping your console app on the screen.  Instead use Ctrl-F5 to run or add breakpoints.
 
-## auto
-* Ask permission before using auto.  You will need to convince the instructor that you understand the pros and cons of your choice.
-
 ## Check your spelling and grammar on your output
 * The user will turn on the bozo bit if you leave in spelling or grammatical errors.  Copy your output into a word docuiment if you need to.
+
+### Unstructured Jumping
++ If *goto's* you use, cranky instructor you will make.  Many points will you lose.  
++ In 116,126, 136 we will only use *break* statements connected to a switch statement.  There are situations where it is reasonable to use breaks and in these classes we wont.  You may only use them if you can make a cogent arugument for a break and you get permision _in advance_.
++ In 116,126, 136 we will not use *continue* statements.   There are situations where it is reasonable to use continue statements and in these classes we wont.  You may only use them if you can make a cogent arugument and you get permision _in advance_.
+
+## auto
+* Ask permission before using auto.  You will need to convince the instructor that you understand the pros and cons of your choice.
 
 ## Descriptive and Consistent Naming
 
@@ -49,47 +54,6 @@ Chose either 'CamelCase' or snake_case and stick to it within your program.
 *Note that the C++ standard does not follow any of these guidelines. Everything in the standard is lowercase only.*
 
 
-
-
-
-
-### Unstructured Jumping
-+ If *goto's* you use, cranky instructor you will make.  Many points will you lose.  
-+ In 116,126, 136 we will only use *break* statements connected to a switch statement.  There are situations where it is reasonable to use breaks and in these classes we wont.  You may only use them if you can make a cogent arugument for a break and you get permision _in advance_.
-+ In 116,126, 136 we will not use *continue* statements.   There are situations where it is reasonable to use continue statements and in these classes we wont.  You may only use them if you can make a cogent arugument and you get permision _in advance_.
-
-### Distinguish Private Object Data
-
-Name private data with a prefix to distinguish it from public data.  I prefer:  `m_`  and you can use _ instead.
-
-Please do this.  It will drive you and your instructor nuts otherwise.
-
-
-### Well formed example
-
-```cpp
-class MyClass
-{
-public:
-  MyClass(int t_data)
-    : m_data(t_data)
-  {
-  }
-  
-  int getData() const
-  {
-    return m_data;
-  }
-  
-private:
-  int m_data;
-};
-```
-
-## Use `nullptr`
-
-C++11 introduces `nullptr` which is a special type denoting a null pointer value. This should be used instead of 0 or NULL to indicate a null pointer.
-
 ## Comments
 
 Comment blocks should use `//`, not `/* */`. Using `//` makes it much easier to comment out a block of code while debugging.
@@ -98,28 +62,11 @@ Its ok to comment out code.  You also can use #ifdef TODO to block out code you 
 
 It is better to turn an incomplete program that is compiling and has commented out code then an aborting or not compiling program.
 
-## Include Guards
-
-Header files must contain an distinctly named include guard to avoid problems with including the same header multiple times or conflicting with other headers from other projects
-
-```cpp
-#ifndef MYPROJECT_MYCLASS_H
-#define MYPROEJCT_MYCLASS_H
-
-namespace MyProject {
-class MyClass {
-};
-}
-
-#endif
-```
-You can also use *#pragma once*  IF and Only IF you explain it the first time you use it. 
-
 ## Includes and Namespaces
 *  Only include libraries you need.  Including extra libraries = bloat.  If you can comment it out and it still compiles, it doesn't belong.
 * CST136 programs should have using std::<the thing you are using>.  CST116 & CST126 can use "using namespace std". 
 * Never Use `using` In a Header File.  This causes the name space you are `using` to be pulled into the namespace of the header file.
- 
+
 ## Use consistent indenting. 
 
 Tabs are not allowed, and a mixture of tabs and spaces is strictly forbidden. Modern autoindenting IDEs and editors require a consistent standard to be set.
@@ -171,6 +118,62 @@ if (x && y && myFunctionThatReturnsBool()
     && (15 > 12 || 2 < 3)) { 
 }
 ```
+## Always Use Namespaces
+
+There is almost never a reason to declare an identifier in the global namespaces. Instead, functions and classes should exist in an appropriately named namespaces or in a class inside of a namespace. Identifiers which are placed in the global namespace risk conflicting with identifiers from other (mostly C, which doesn't have namespaces) libraries.
+
+136:  Do not bring in the whole std namespace in labs,  Instead site each individual element.  ie std::cout or std::endl 
+126:  You can bring in namespace std and I'd encourage you to start getting in the habit of using std::cout.
+116:  You can use "using namespace std"
+
+## Use `nullptr`
+
+C++11 introduces `nullptr` which is a special type denoting a null pointer value. This should be used instead of 0 or NULL to indicate a null pointer.
+
+### Distinguish Private Object Data
+
+Name private data with a prefix to distinguish it from public data.   For example, `m_`  or prefixing with _ .
+
+Please do this.  It will drive you and your instructor nuts otherwise.
+
+### Well formed example
+
+```cpp
+class MyClass
+{
+public:
+  MyClass(int t_data)
+    : m_data(t_data)
+  {
+  }
+  
+  int getData() const
+  {
+    return m_data;
+  }
+  
+private:
+  int m_data;
+};
+```
+
+## Include Guards
+
+Header files must contain an distinctly named include guard to avoid problems with including the same header multiple times or conflicting with other headers from other projects
+
+```cpp
+#ifndef MYPROJECT_MYCLASS_H
+#define MYPROEJCT_MYCLASS_H
+
+namespace MyProject {
+class MyClass {
+};
+}
+
+#endif
+```
+You can also use *#pragma once*  IF and Only IF you explain it the first time you use it. 
+
 
 
 ## Use "" For Including Local Files
@@ -187,7 +190,6 @@ if (x && y && myFunctionThatReturnsBool()
 // makes code more difficult to package and distribute
 #include <string>
 #include <MyHeader.h>
-
 
 // Good Idea
 // requires no extra params and notifies the user that the file
@@ -259,14 +261,6 @@ This is a proactive approach to simplify compilation time and rebuilding depende
 + If the lab says do a seperate .h / .cpp then do it, even if your program is small.
 + For Template classes (136) you can ignore this since there is a known bug here.  
 
-## Always Use Namespaces
-
-There is almost never a reason to declare an identifier in the global namespaces. Instead, functions and classes should exist in an appropriately named namespaces or in a class inside of a namespace. Identifiers which are placed in the global namespace risk conflicting with identifiers from other (mostly C, which doesn't have namespaces) libraries.
-
-136:  Do not bring in the whole std namespace in labs,  Instead site each individual element.  ie std::cout or std::endl 
-126:  You can bring in namespace std and I'd encourage you to start getting in the habit of using std::cout.
-116:  You can use "using namespace std"
-
 ## Think Through Tradeoffs with Compiler Macros
 
 Compiler definitions and macros are replaced by the pre-processor before the compiler is ever run. This can make debugging very difficult because the debugger doesn't know where the source came from.   There are times when compiler macros are helpful, AND think through the tradeoffs and make a conscious choice.  
@@ -283,7 +277,6 @@ namespace my_project {
 // Bad Idea
 #define PI 3.14159;
 ```
-
 
 ### Strive to be const correct
 Reference:  https://isocpp.org/wiki/faq/const-correctness
