@@ -120,7 +120,7 @@ if (x && y && myFunctionThatReturnsBool()
 ```
 ## Always Use Namespaces
 
-There is almost never a reason to declare an identifier in the global namespaces. Instead, functions and classes should exist in an appropriately named namespaces or in a class inside of a namespace. Identifiers which are placed in the global namespace risk conflicting with identifiers from other (mostly C, which doesn't have namespaces) libraries.
+There is almost never a reason to declare an identifier in the global namespace. Instead, functions and classes should exist in an appropriately named namespaces or in a class inside of a namespace. Identifiers which are placed in the global namespace risk conflicting with identifiers from other (mostly C, which doesn't have namespaces) libraries.
 
 136:  Do not bring in the whole std namespace in labs,  Instead site each individual element.  ie std::cout or std::endl 
 126:  You can bring in namespace std and I'd encourage you to start getting in the habit of using std::cout.
