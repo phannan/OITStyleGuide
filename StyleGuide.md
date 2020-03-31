@@ -64,8 +64,7 @@ It is better to turn an incomplete program that is compiling and has commented o
 
 ## Includes and Namespaces
 *  Only include libraries you need.  Including extra libraries = bloat.  If you can comment it out and it still compiles, it doesn't belong.
-* CST136 programs should have using std::<the thing you are using>.  CST116 & CST126 can use "using namespace std". 
-* Never Use `using` In a Header File.  This causes the name space you are `using` to be pulled into the namespace of the header file.
+* Never Use `using` In a Header File.  This causes the namespace to be included every place you include the header.  This equals bloat * 5.
 
 ## Use consistent indenting. 
 
