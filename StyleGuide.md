@@ -9,9 +9,16 @@ These standards started life here:  https://gist.github.com/lefticus/10191322#fi
 ## Site your source
 When you didn't originate the code, site your source.  For example see above.
 
-## Don't Pause at the end
+## Don't make me click unnecessarily
 * Don't do a getch() at the end of your program.  It is depricated.
 * Don't use other methods for keeping your console app on the screen.  Instead use Ctrl-F5 to run or add breakpoints.
+* Use CLS sparingly.  I am not a fan of clearing the screen.  If you like doing it, be extra careful.  Always give the user context, repeating the data needed to get the whole picture.  (IOW, if you clear away something that helps me understand what is going on that isn't good.)
+
+## No Ugly output
+Most of the time in lab you can print it in your own format so long as it isn't ugly and is kind.  By this I mean:
+* All data output has a label.  This might be a label or a column header.  An end user needs this for context.
+* Column data lines up in a way you would expect.  If its numeric the . lines up.  (This implies that it is right justified.)
+* And you are kind.  Instead of saying "wrong entry stupid" say something like:  "Enter a number between 1 and 5".
 
 ## Check your spelling and grammar on your output
 * The user will turn on the bozo bit if you leave in spelling or grammatical errors.  Copy your output into a word docuiment if you need to.
