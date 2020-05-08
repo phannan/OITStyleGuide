@@ -73,20 +73,9 @@ It is better to turn an incomplete program that is compiling and has commented o
 *  Only include libraries you need.  Including extra libraries = bloat.  If you can comment it out and it still compiles, it doesn't belong.
 * Never Use `using` In a Header File.  This causes the namespace to be included every place you include the header.  This equals bloat * 5.
 
-## Use consistent indenting. 
+## Let visual studio do the spacing.  
 
-Tabs are not allowed, and a mixture of tabs and spaces is strictly forbidden. Modern autoindenting IDEs and editors require a consistent standard to be set.
-
-```cpp
-// Good Idea
-int myFunction(bool t_b)
-{
-  if (t_b)
-  {
-    // do something
-  }
-}
-```
+Use the natural indenting that visual studio comes up with.  Don't squish please.  
 
 ## {} are encouraged for blocks. 
 Leaving them off can lead to semantic errors in the code.
